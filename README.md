@@ -26,10 +26,24 @@ Son siglas en inglés de (On Board Computer) este sistema es básicamente la com
 ## Gestor de periféricos
 Se encarga de administrar los diferentes módulos por medio de una comunicación USB con los otros microcontroladores, enviando y recibiendo constantemente paquetes de datos en forma de JSON.
 ### EEH
-De este periférico solo recibe información de los sensores biomédicos, la estructura de los paquetes de información estan construidas en forma de JSON de la sihuiente forma:
-
+De este periférico solo recibe información de los sensores biomédicos, la estructura de los paquetes de información estan construidas en forma de JSON de la siguiente forma:
+{
+    "Pulse": 70,
+    "Oxigen":60,
+    "Temperature": [37,40,36,38]
+}
 ### LSS
-
+Des este periférico se trasmite (actuadores) y se recibe (Manómetro) datos desde la Raspberry, la estructura de los paquetes de información estan construidas en forma de JSON de la siguiente forma:
+Envía:
+{
+    "Pression":40
+}
+Recibe:
+{
+    "Light": 40,
+    "Pumps": 70,
+    "Fan":[60,80]
+}
 ### HMI
 
 
