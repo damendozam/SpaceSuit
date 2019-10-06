@@ -56,4 +56,4 @@ Se encarga de mostar la medida de los sensores, el estado de los actuadores, y d
 #### Página de interacción con Base
 
 ## Gestor de tareas internas
-Se encarga principalmente de administrar las tareas internas de la computadora como la actualización del Gestor de Periféricos, 
+Se encarga principalmente de administrar las tareas internas de la computadora como la actualización de archivos desde repositorio según el estado del botón de actualización
