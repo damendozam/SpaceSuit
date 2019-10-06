@@ -23,6 +23,7 @@ Para que se pueda realizar el envío de información de la medición y la devida
 
 # OBC
 Son siglas en inglés de (On Board Computer) este sistema es básicamente la computadora que controla las funciones generales de los periféricos; está desarrollado sobre una placa Raspberry PI 3B que tiene dos funciones principales que son: gestor de periféricos,y gestor de tareas internas.
+
 ## Gestor de periféricos
 Se encarga de administrar los diferentes módulos por medio de una comunicación USB con los otros microcontroladores, enviando y recibiendo constantemente paquetes de datos en forma de JSON.
 ### EEH
@@ -45,6 +46,14 @@ Recibe:
     "Fan":[60,80]
 }
 ### HMI
+Se encarga de mostar la medida de los sensores, el estado de los actuadores, y de establecer una comunicación con otras entidades, esta dividido en tres paginas principales que son:
+#### Página principal
 
+#### Página de interacción con otro traje
+
+#### Página de interacción con Rover
+
+#### Página de interacción con Base
 
 ## Gestor de tareas internas
+Se encarga principalmente de administrar las tareas internas de la computadora como la actualización del Gestor de Periféricos, 
