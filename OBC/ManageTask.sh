@@ -13,7 +13,6 @@ sudo echo "in" > /sys/class/gpio/gpio2/direction # Status pin (in or out)
 while true; do
 	state=$(cat /sys/class/gpio/gpio2/value) # Read state pin, this pin is associated with the button
 	if [ "$state" = "0" ];then # Condition of the button state
-		cd SpaceSuit
         git pull
         python SpaceSuit/HMI/ScreenSpaceSuit.py
 	fi
