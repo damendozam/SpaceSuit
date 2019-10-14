@@ -15,6 +15,7 @@ while true; do
 	if [ "$state" = "0" ];then # Condition of the button state
         git pull
         python SpaceSuit/HMI/ScreenSpaceSuit.py
+        #Prueba exitosa
 	fi
 done
 
