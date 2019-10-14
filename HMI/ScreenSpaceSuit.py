@@ -48,7 +48,7 @@ disp.clear((255,255,255))
 print('Loading image...')
 #image = Image.open('cat.jpg')
 #image = Image.open('../HMI/Imagen2.png')
-image = Image.open('SpaceSuit/HMI/Imagen2.png')
+image = Image.open('HMI/Imagen2.png')
 # Resize the image and rotate it so it's 240x320 pixels.
 image = image.rotate(90).resize((240, 320))
 

@@ -9,12 +9,16 @@
 
 sudo echo "2" > /sys/class/gpio/export # Number pin (GPIO2) 
 sudo echo "in" > /sys/class/gpio/gpio2/direction # Status pin (in or out)
-
+cd SpaceSuit
+python HMI/ScreenSpaceSuit.py
+cd
 while true; do
 	state=$(cat /sys/class/gpio/gpio2/value) # Read state pin, this pin is associated with the button
 	if [ "$state" = "0" ];then # Condition of the button state
-        git pull
-        python ../HMI/ScreenSpaceSuit.py 
+		cd SpaceSuit
+		git pull
+        	python HMI/ScreenSpaceSuit.py
+		cd
         #Prueba exitosa
 	fi
 done
