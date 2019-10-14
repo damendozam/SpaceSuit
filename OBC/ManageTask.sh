@@ -5,7 +5,19 @@
 # y se crea antes de subir la imagen a la memoria SD. Adicionalmente, instala Arduino, de 
 # manera que se pueda actualizar los periféricos desde la computadora. Nota, es necesario 
 # modificar el archivo crontab desde fabrica
+#!/bin/bash
 
+sudo echo "2" > /sys/class/gpio/export # Number pin (GPIO2) 
+sudo echo "in" > /sys/class/gpio/gpio2/direction # Status pin (in or out)
+
+while true; do
+	state=$(cat /sys/class/gpio/gpio2/value) # Read state pin, this pin is associated with the button
+	if [ "$state" = "0" ];then # Condition of the button state
+		cd SpaceSuit
+        git pull
+        python SpaceSuit/HMI/ScreenSpaceSuit.py
+	fi
+done
 
 
 
