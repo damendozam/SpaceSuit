@@ -14,7 +14,7 @@ while true; do
 	state=$(cat /sys/class/gpio/gpio2/value) # Read state pin, this pin is associated with the button
 	if [ "$state" = "0" ];then # Condition of the button state
         git pull
-        python SpaceSuit/HMI/ScreenSpaceSuit.py
+        python ../HMI/ScreenSpaceSuit.py 
         #Prueba exitosa
 	fi
 done
